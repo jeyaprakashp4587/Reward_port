@@ -17,9 +17,10 @@ header {
   color: whitesmoke;
   padding-inline: 20px;
   font-size: 19px;
+  z-index: 10;
 }
 body {
-  width: 100%;
+  width: 100vw;
   height: auto;
   /* margin: 0; */
   padding: 0;
@@ -27,6 +28,11 @@ body {
   display: flex;
   flex-direction: column;
   row-gap: 3rem;
+  overflow-x: hidden;
+  /* border: 10px solid red; */
+}
+header {
+  width: 100%;
 }
 header > div {
   display: flex;
@@ -50,8 +56,10 @@ header > div > li {
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas: 1fr;
   justify-content: center;
+  overflow: hidden;
   /* margin-top: 5rem; */
-  /* border: 1px solid red; */
+  /**/
+  /* height: 100vh; */
 }
 .home-image {
   display: flex;
@@ -144,7 +152,7 @@ header > div > li {
 }
 .experience-box h4 {
   font-size: 0.7rem;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 10px;
   width: fit-content;
   padding: 0.6rem 1rem;
@@ -165,7 +173,7 @@ header > div > li {
   line-height: normal;
 }
 .skills-container > img {
-  width: 40rem;
+  width: 80%;
 }
 .projects-container {
   /* margin-top: 10rem; */
@@ -185,11 +193,7 @@ header > div > li {
 }
 .projects-lists > div:nth-child(odd) {
   flex-direction: row-reverse;
-  /* border: 1px solid red; */
-}
-.projects-lists > div:nth-child(odd) {
-  flex-direction: row-reverse;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 .projects-lists > div:nth-child(odd) > div > h3 {
   text-align: right;
@@ -206,7 +210,7 @@ header > div > li {
 .projects-box > div:nth-child(2) {
   border-width: 5px 0px 0px 4px;
   border-color: #2b0b3a;
-  border-style: solid;
+  /* border-style: solid; */
   background-color: #2b0b3a;
   padding: 1rem 0 0 1rem;
 }
@@ -243,4 +247,57 @@ header > div > li {
 .icons > img {
   width: 3rem;
   filter: brightness(0) invert(1);
+}
+/* media query */
+@media only screen and (max-width: 600px) {
+  header > div > li {
+    position: absolute;
+    top: 1;
+    display: none;
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+  }
+  .home-container {
+    /* border: 1px solid red; */
+    row-gap: 1rem;
+    overflow: hidden;
+  }
+  .home-image {
+    flex-direction: column;
+  }
+  .home-gradient {
+    /* display: none; */
+    width: 10rem;
+  }
+  .experience-container {
+    /* border: 1px solid red; */
+  }
+  .experience-boxes {
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .skills-container {
+    /* border: 1px solid red; */
+  }
+  .skills-container > img {
+    width: 100%;
+  }
+  .projects-container {
+    /* border: 1px solid red; */
+    overflow: hidden;
+  }
+  .contact-container {
+    /* border: 1px solid red; */
+    overflow: hidden;
+  }
+  .projects-box {
+    flex-direction: column;
+  }
+  .projects-box > div > img {
+    width: 100%;
+  }
+  .projects-lists > div:nth-child(odd) {
+    flex-direction: column;
+  }
 }
