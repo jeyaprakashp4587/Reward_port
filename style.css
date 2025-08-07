@@ -27,7 +27,7 @@ body {
   background-color: #11071f !important;
   display: flex;
   flex-direction: column;
-  row-gap: 3rem;
+  row-gap: 6rem;
   overflow-x: hidden;
   /* border: 10px solid red; */
 }
@@ -53,13 +53,11 @@ header > div > li {
   /* margin-top: 2rem; */
   color: white;
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: 1fr;
+  grid-template-rows: repeat(2);
   justify-content: center;
-  overflow: hidden;
-  /* margin-top: 5rem; */
-  /**/
+  row-gap: 3rem;
   /* height: 100vh; */
+  align-items: center;
 }
 .home-image {
   display: flex;
@@ -190,10 +188,11 @@ header > div > li {
   justify-content: space-between;
   column-gap: 2rem;
   margin-top: 2rem;
+  row-gap: 1.6rem;
 }
 .projects-lists > div:nth-child(odd) {
   flex-direction: row-reverse;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .projects-lists > div:nth-child(odd) > div > h3 {
   text-align: right;
@@ -248,8 +247,16 @@ header > div > li {
   width: 3rem;
   filter: brightness(0) invert(1);
 }
+#menu {
+  display: none;
+}
 /* media query */
 @media only screen and (max-width: 600px) {
+  #menu {
+    display: block;
+    width: 1.5rem;
+    filter: invert(1);
+  }
   header > div > li {
     position: absolute;
     top: 1;
@@ -258,17 +265,27 @@ header > div > li {
     width: 80%;
     height: 100%;
   }
+  header > h3 {
+    font-size: 1.7rem;
+  }
   .home-container {
     /* border: 1px solid red; */
+    justify-content: space-between;
     row-gap: 1rem;
-    overflow: hidden;
   }
   .home-image {
+    /* border: 1px solid red; */
     flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-img {
+    filter: drop-shadow(5px 5px);
+    /* border: 1px solid red; */
   }
   .home-gradient {
     /* display: none; */
-    width: 10rem;
   }
   .experience-container {
     /* border: 1px solid red; */
@@ -299,5 +316,8 @@ header > div > li {
   }
   .projects-lists > div:nth-child(odd) {
     flex-direction: column;
+  }
+  .icons > img {
+    width: 2rem;
   }
 }
