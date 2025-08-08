@@ -70,8 +70,8 @@ header > div > li {
 .home-image > img:nth-child(2) {
   width: 20rem;
   height: 20rem;
-  border-radius: 10000px;
-  filter: brightness(80%) drop-shadow(6px 6px 10px #0000009a);
+  border-radius: 10rem;
+  background-size: contain;
 }
 .home-image-content {
   display: flex;
@@ -150,7 +150,7 @@ header > div > li {
 }
 .experience-box h4 {
   font-size: 0.7rem;
-  /* border: 1px solid white; */
+  border: 1px solid white;
   border-radius: 10px;
   width: fit-content;
   padding: 0.6rem 1rem;
@@ -227,7 +227,7 @@ header > div > li {
 .contact-container {
   color: white;
   /* margin-top: 10rem; */
-  row-gap: 2rem;
+  row-gap: 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -244,7 +244,7 @@ header > div > li {
   column-gap: 2rem;
 }
 .icons > img {
-  width: 3rem;
+  width: 2rem;
   filter: brightness(0) invert(1);
 }
 #menu {
@@ -289,10 +289,6 @@ header > div > li {
     row-gap: 2rem;
     justify-content: center;
     align-items: center;
-  }
-  .hero-img {
-    filter: drop-shadow(5px 5px);
-    /* border: 1px solid red; */
   }
   .experience-container {
     /* border: 1px solid red; */
