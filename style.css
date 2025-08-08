@@ -250,6 +250,14 @@ header > div > li {
 #menu {
   display: none;
 }
+.home-gradient {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+  width: 25rem;
+}
 /* media query */
 @media only screen and (max-width: 600px) {
   #menu {
@@ -270,8 +278,10 @@ header > div > li {
   }
   .home-container {
     /* border: 1px solid red; */
-    justify-content: space-between;
+    justify-content: center;
     row-gap: 1rem;
+    /* overflow-x: hidden; */
+    align-items: center;
   }
   .home-image {
     /* border: 1px solid red; */
@@ -283,9 +293,6 @@ header > div > li {
   .hero-img {
     filter: drop-shadow(5px 5px);
     /* border: 1px solid red; */
-  }
-  .home-gradient {
-    /* display: none; */
   }
   .experience-container {
     /* border: 1px solid red; */
@@ -319,5 +326,13 @@ header > div > li {
   }
   .icons > img {
     width: 2rem;
+  }
+  .home-gradient {
+    position: absolute;
+    top: 30%;
+    width: 20rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
   }
 }

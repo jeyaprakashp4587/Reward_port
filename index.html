@@ -11,6 +11,8 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
@@ -27,25 +29,14 @@
     <!-- home container -->
     <div class="home-container container">
       <div class="home-image">
-        <img
-          class="home-gradient"
-          src="./assets/Gradient.png"
-          style="
-            position: absolute;
-            top: -80px;
-            left: -80px;
-            z-index: 0;
-            /* object-fit: cover; */
-            width: 30rem;
-          "
-        />
+        <img class="home-gradient" src="./assets/Gradient.png" />
         <img
           class="hero-img"
           src="./assets/jp.png"
           alt=""
           style="z-index: 1; position: relative"
         />
-        <div class="home-image-content">
+        <div class="home-image-content" data-aos="fade-up">
           <h1>Hello! I Am <span style="color: #7127ba">Ibrahim Memon</span></h1>
           <h2>
             Judges a book<br />
@@ -82,7 +73,7 @@
             opacity: 0.4;
           "
         />
-        <div class="experience-box">
+        <div class="experience-box" data-aos="fade-up">
           <h2>CIB on the Mobile</h2>
           <p>
             Take your client onboard seamlessly by our amazing tool of digital
@@ -181,5 +172,9 @@
         <img src="https://img.icons8.com/ios/250/google-logo.png" alt="" />
       </div>
     </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
